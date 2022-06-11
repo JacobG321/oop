@@ -16,6 +16,8 @@ class User:
         print(self.last_name)
         print(self.email)
         print(self.age)
+        print(self.gold_card_points)
+        return self
     
     def enroll(self):
         if self.is_rewards_member == False:
@@ -23,24 +25,21 @@ class User:
             self.gold_card_points += 200
         elif self.is_rewards_member == True:
             print("User already a member")
+        return self
 
     def spend_points(self, amount):
         if amount > self.gold_card_points:
             print("insuffecient funds")
         else:
             self.gold_card_points = self.gold_card_points - amount
+        return self
 
 
 
 bob = User("Bobbert", "Harvery", "bobbertharvery@yahoo.com", 27)
 amber = User("Amber", "Harvy", "ambylambs@yahoo.com", 300)
 
-print(bob.is_rewards_member)
-bob.enroll()
-print(bob.is_rewards_member)
-bob.enroll()
-print(bob.gold_card_points)
-bob.spend_points(200)
-print(bob.gold_card_points)
-bob.spend_points(100)
+bob.enroll().display_info().spend_points(300).display_info()
+
+
 
