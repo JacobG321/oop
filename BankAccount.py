@@ -3,6 +3,7 @@ class BankAccount:
     balance = 0
     int_rate = .01
     all_accounts = []
+    account_list = {}
 
     def __init__(self, int_rate, balance):
         self.balance = balance
@@ -25,9 +26,14 @@ class BankAccount:
         print("Interest Rate is", self.int_rate)
         return self
     
-    def yield_interest(self, int_rate):
+    def yield_interest(self):
         self.balance = self.balance + self.balance * self.int_rate
         return self
+
+    @classmethod
+    def add_new_account(cls):
+        pass
+        
 
     @classmethod
     def all_balances(cls):
@@ -38,9 +44,11 @@ class BankAccount:
         
 
 
-bob = BankAccount(.01, 100)
+# bob = BankAccount(.01, 100)
 lois = BankAccount(.02, 10)
-bob.deposit(25).deposit(25).deposit(25).withdraw(15).yield_interest(.01).display_account_info()
-lois.deposit(15).deposit(15).withdraw(5).withdraw(5).withdraw(10).withdraw(5).yield_interest(.02).display_account_info()
+# bob.deposit(25).deposit(25).deposit(25).withdraw(15).yield_interest(.01).display_account_info()
+lois.deposit(15).deposit(15).withdraw(5).withdraw(5).withdraw(10).withdraw(5).yield_interest().display_account_info()
 
-print(BankAccount.all_balances())
+# print(BankAccount.all_balances())
+
+# add_new_account()
