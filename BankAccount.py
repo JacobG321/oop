@@ -45,9 +45,9 @@ class BankAccount:
 
 
 # bob = BankAccount(.01, 100)
-lois = BankAccount(.02, 10)
+# lois = BankAccount(.02, 10)
 # bob.deposit(25).deposit(25).deposit(25).withdraw(15).yield_interest(.01).display_account_info()
-lois.deposit(15).deposit(15).withdraw(5).withdraw(5).withdraw(10).withdraw(5).yield_interest().display_account_info()
+# lois.deposit(15).deposit(15).withdraw(5).withdraw(5).withdraw(10).withdraw(5).yield_interest().display_account_info()
 
 # print(BankAccount.all_balances())
 
