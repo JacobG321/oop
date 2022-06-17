@@ -10,6 +10,7 @@ class BankAccount:
         self.int_rate = int_rate
         BankAccount.all_accounts.append(self)
 
+
     def deposit(self, amount):
         self.balance += amount
         return self
